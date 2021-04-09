@@ -1,38 +1,310 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+/* sets the background color for entire page */
+body{
+  background-color: #ececec;
+  margin: 0;
+}
+
+/* styles the header container */
+.header{
+  text-align: center;
+  padding: 10px;
+  background-color: #30475e;
+}
+
+.header nav{
+  display: flex;
+  justify-content: center;
+}
+
+.header nav a{
+  padding-left: 0;
+  list-style: none;
+  text-decoration: none;
+  margin: 0 10px 0 10px;
+  text-shadow: rgb(0, 0, 0) 0 3px 15px;
+}
+
+/* styles the h1 heading */
+h1{
+  color: rgb(255, 255, 255);
+  font-family: 'Oswald', sans-serif;
+  text-shadow: rgb(0, 0, 0) 0 3px 15px;
+}
+
+
+/* sets the font family of the links within the nav container */
+nav > a{
+  font-family: 'EB Garamond', serif;
+}
+
+/* styles and centers the image */
+.round-pic{
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  width: 80%;
+  margin: 20px auto 0 auto;
+  box-shadow: rgba(49, 54, 85, 0.562) 0px 1px 20px;
+}
+
+.intro .group {
+  margin-bottom: 20px;
+}
+
+/* styles the about me class */
+.about-me{
+  background-color: #b9945c3a;
+  padding-top: 1px;
+}
+
+/* styles the image of the van */
+img.van-pic{
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.336) 0 1px 20px;
+}
+
+
+/* styles the h2 elements */
+h2{
+  height: 26px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: #313d4e;
+}
+
+/* styles the text within the paragraph and list elements */
+p, li{
+  font-family: 'EB Garamond', serif;
+  color: #222831;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* aligns the lists left */
+ul{
+  text-align: left;
+}
+
+/* styles the footer at the bottom of the page */
+footer{
+  background-color: #30475e;
+  padding: 10px;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* centers the text within the thanks container */
+.thanks > p{
+  text-align: center;
+  font-size: 19px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* styles each of the app screenshots */
+.app-screenshot{
+  width:90%;
+  border-radius: 4mm;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.336) 0 1px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* styles the font of the app names */
+.app-name{
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.app-content{
+  margin: 5%;
+  margin-top: 20px;
+}
+
+form label{
+  display: block;
+  font-size: 18px;
+  margin-top: 5px;
+  color: #222831;
+  font-family: 'EB Garamond', serif;
+  text-align: left;
+}
+
+form input{
+  text-align: left;
+  width: 100%;
+  margin-right: 20px;
+}
+
+form input[type=text]{
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+form textarea{
+  width: 100%;
+  height: 200px;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color:#000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+hr{
+  width: 80%;
+  border-bottom: none;
+  margin-top: 30px;
+}
+
+.contact-statement{
+  text-align: center;
+  margin: 20px;
+}
+
+.contact-icons{
+  text-align: center;
+}
+
+.contact-icons>a{
+  text-decoration: none;
+}
+
+.email-icon, .linkedin-icon, .github-icon{
+  width: 40px;
+  margin: 10px;
+}
+
+.leave-a-message{
+  text-align: center;
+}
+
+form{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-container{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+/* sets pseudolinks for the webpage's links */
+a:link {color: #396bb3;}
+a:visited {color: #396bb3;}
+a:hover {color: green;}
+a:active {color: pink;}
+
+nav a:link {color: white;}
+nav a:visited{color: white;}
+nav a:hover {color: rgb(251, 253, 135);}
+nav a:active {color: pink;}
+
+img.app-screenshot {border-color: black}
+img.app-screenshot:hover {opacity: 0.6}
+
+
+
+/* ----- groups & items (mobile first) ----- */
+
+/* styles the group classes so that the items within them are viewed vertically (mobile view) */
+.group{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* styles the item classes within the group classes */
+.item{
+  flex: 1;
+  margin: 20px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* styles the item-double class so that it is twice as wide as the item class when viewed from a desktop */
+.item-double{
+  flex: 2;
+  margin: 0 20px 20px 20px;
 }
+
+.item .map{
+  width: 100%;
+}
+
+
+
+/* groups & items (desktop) */
+
+/* Media query statement that makes changes to the layout when viewed from a desktop */
+@media all and (min-width: 800px){
+  .group{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .group-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+
+  .item .map{
+    height: 80%;
+    width: 80%;
+    margin-top: 100px;
+  }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  .header h1{
+    font-size: 42px;
+    margin: 14px 0;
+    padding-top: 6px;
+  }
+
+  .header nav {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+  }
+
+  .portfolio-heading{
+    margin-bottom: 40px;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  .item .van-pic{
+    margin-top: 60px;
+  }
+
+  form{
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+
+
+
